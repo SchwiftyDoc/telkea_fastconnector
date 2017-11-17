@@ -1,0 +1,23 @@
+{
+  "name": "fastconnector",
+  "version": "1.0.0",
+  "description": "fastconnector",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fastnetmon",
+    "fastconnector",
+    "redis",
+    "elasticsearch"
+  ],
+  "author": "Corentin Dekimpe",
+  "license": "ISC",
+  "dependencies": {
+    "range_check": "^1.4.0",
+    "redis": "^2.8.0",
+    "ssh-exec": "^2.0.0"
+  }
+}
