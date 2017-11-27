@@ -12,7 +12,7 @@ Company: Telkea
 Clone the Git repository in the /opt directory with the command:
 
 ```
-cd /opt_
+cd /opt
 git clone https://github.com/SchwiftyDoc/telkea_fastconnector.git
 cd telkea_fastconnector
 cd npm install
