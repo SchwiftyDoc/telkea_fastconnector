@@ -4,14 +4,14 @@ FastConnector - Redis to Elasticsearch
 This program is developped in NodeJS for the purpose to store informations
 created by an Fastnetmon process to an Elasticsearch Server.
 
-Author: Corentin Dekimpe
+Author: Corentin Dekimpe<br/>
 Company: Telkea
 
 ## Installation In CentOS7
 
 Clone the Git on the /opt directory with the command:
 
-_cd /opt_
+_cd /opt_<br/>
 _git clone https://github.com/SchwiftyDoc/telkea_fastconnector.git_
 
 Create a service file in _/etc/systemd/system/fastconnector.service_ with the following content:
