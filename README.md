@@ -9,12 +9,14 @@ Company: Telkea
 
 ## Installation on CentOS 7
 
-Clone the Git on the /opt directory with the command:
+Clone the Git repository in the /opt directory with the command:
 
-_cd /opt_<br/>
-_git clone https://github.com/SchwiftyDoc/telkea_fastconnector.git_<br/>
-_cd telkea_fastconnector_<br/>
-_cd npm install_
+```
+cd /opt_
+git clone https://github.com/SchwiftyDoc/telkea_fastconnector.git
+cd telkea_fastconnector
+cd npm install
+```
 
 Create a service file in _/etc/systemd/system/fastconnector.service_ with the following content:
 
@@ -37,12 +39,13 @@ WantedBy=multi-user.target
 
 Then you have access to the program like any other service with the following commands:
 
-_systemctl enable fastconnector_<br/>
-_systemctl (re)start fastconnector_<br/>
-_systemctl status fastconnector_<br/>
-_systemctl stop fastconnector_<br/>
-_journalctl -xeu fastconnector_
-
+```
+systemctl enable fastconnector
+systemctl (re)start fastconnector
+systemctl status fastconnector
+systemctl stop fastconnector
+journalctl -xeu fastconnector
+```
 
 ## Configuration file options :
 
