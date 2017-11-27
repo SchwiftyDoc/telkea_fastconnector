@@ -12,7 +12,9 @@ Company: Telkea
 Clone the Git on the /opt directory with the command:
 
 _cd /opt_<br/>
-_git clone https://github.com/SchwiftyDoc/telkea_fastconnector.git_
+_git clone https://github.com/SchwiftyDoc/telkea_fastconnector.git_<br/>
+_cd telkea_fastconnector_<br/>
+_cd npm install_
 
 Create a service file in _/etc/systemd/system/fastconnector.service_ with the following content:
 
