@@ -7,7 +7,7 @@ created by an Fastnetmon process to an Elasticsearch Server.
 Author: Corentin Dekimpe<br/>
 Company: Telkea
 
-## Installation In CentOS7
+## Installation on CentOS 7
 
 Clone the Git on the /opt directory with the command:
 
