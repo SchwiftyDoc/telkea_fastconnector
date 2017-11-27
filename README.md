@@ -5,7 +5,6 @@ This program is developped in NodeJS for the purpose to store informations
 created by an Fastnetmon process to an Elasticsearch Server.
 
 Author: Corentin Dekimpe
-
 Company: Telkea
 
 ## Installation In CentOS7
