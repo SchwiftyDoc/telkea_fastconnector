@@ -29,7 +29,6 @@ config.fastnetmon.networks.forEach((network) => {
         throw new Error("Config file: One network is not a range of IP");
     }
 });
-console.log('All networks defined are correct: [Ok]');
 
 // Set HTTP options to send to Elastic
 
@@ -62,9 +61,6 @@ client.on('connect', () => {
                         temp.ip = data.ip;
                         temp.network = getNetwork(data.ip);
                         data = JSON.stringify(temp);
-
-                        console.log(data);
-                        process.exit(0);
 
                         // Set Content-Length
                         const options = {
@@ -111,13 +107,15 @@ client.on('connect', () => {
 });
 
 /*
- * Fonction that says what networks contains the ip
+ * Fonction that says which networks contains the ip
  */
 function getNetwork(ip) {
+    let result;
     config.fastnetmon.networks.forEach((network) => {
         if (range.inRange(ip, network))
-            return network;
+            result = network;
     });
+    return result;
 }
 
 /*
