@@ -35,37 +35,33 @@ WantedBy=multi-user.target
 
 Then you have access to the program like any other service with the following commands:
 
-_systemctl enable fastconnector_
-_systemctl (re)start fastconnector_
-_systemctl status fastconnector_
-_systemctl stop fastconnector_
+_systemctl enable fastconnector_<br/>
+_systemctl (re)start fastconnector_<br/>
+_systemctl status fastconnector_<br/>
+_systemctl stop fastconnector_<br/>
 _journalctl -xeu fastconnector_
 
 
 ## Configuration file options :
 
-### Iftop
+### Fastnetmon
 
-All the configuration about the iftop process
+All the configuraiton about the Fastnetmon process
 
-* interface: Interface that Iftop will listen to.
-* networks: Array of networks written with the common writing _x.x.x.x/y_.
-* onlynetworks: Boolean if put on true only the data from the networks defined will be send to Elasticsearch.
-* duration: _2, 10 or 40_ is the time iftop process will run before stopping and write the file.
+* networks: Array of networks being watch by fastnetmon. Data should be available on the server at _/etc/network_list_
 
-### Data
+### Redis
 
-All the configuration about the Data saved by Iftop process
+All the configuration about the Redis Server
 
-* path: Set data path where to store the files created from iftop. Default is : /tmp/ifconnector.
-* keep: Boolean set on true if you want to keep the data once sent, otherwise set on false.
-* ext: File extension.
+* host: Hostname or Ip Address of the Redis Server.
+* port: Port to communicate with the Redis Server. Default: 6379
 
 ### Elasticsearch
 
-All the configuraiton about the Elasticsearch server
+All the configuration about the connections to the Elasticsearch Server.
 
-* host: Hostname or Ip Address of the server.
-* port: Port to communicate with the server. Default for Elasticsearch : 9200.
-* index: Index of the Elasticsearch database to keep.
-* type: Name of the Type to store in Elasticsearch.
+* host: Hostname or Ip Address to the Elasticsearch Server.
+* port: Port to communicate with the Elasticsearch Server. Default: 9200.
+* index: Choose the Index where to save your data.
+* type: Type of the data saved.

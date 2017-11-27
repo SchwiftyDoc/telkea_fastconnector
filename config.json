@@ -10,11 +10,6 @@
     "type": "data"
   },
   "fastnetmon": {
-    "host": "172.16.3.251",
-    "user": "root",
-    "privateKey": "/root/.ssh/",
-    "path": "/opt/fastnetmon/fastnetmon",
-    "restart": 1000,
     "networks": [
       "195.137.228.0/23",
       "212.24.192.0/19",
